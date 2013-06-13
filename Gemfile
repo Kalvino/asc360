@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'devise'
+gem "bootstrap-sass-rails", "~> 2.2.2.0"
 
 group :production do 
  gem 'pg'

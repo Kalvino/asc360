@@ -1,28 +1,32 @@
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-             <a class="brand" href="/">ASC360</a>
 
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li><%= link_to 'Home',  root_path %></li>
-                        <li><%= link_to 'About',  about_path %>
-                        </li>
-                    </ul>
-                    <ul class="nav pull-right">
-                    	<% if user_signed_in? %>
-                    		<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-	                    	<li><%= link_to 'Logout',  destroy_user_session_path, method: :delete %></li> 
-	                  	<% else %>
-	                    	<li><%= link_to 'Login',  new_user_session_path %></li> 
-                      <% end %> 
-                    </ul>
-                </div>
-        </div>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      
+      <h3 class="muted"><%= link_to "State Farm", '#', id: "logo" %></h3>
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+        </a>
+      <nav>
+        <ul class="nav pull-right nav-tabs">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "About", about_path %></li>
+          <% if signed_in? %>
+            <li><%= link_to "Welcome User", '#' %></li>
+            <li><%= link_to "help", '#' %></li>
+            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to "Contact Us", '#' %></li>
+            <li><%= link_to "help", '#' %></li>
+          <% else %>
+              
+              <li><%= link_to "Sign in", new_user_session_path %></li>
+            
+          <% end %>
+        </ul>
+      </nav>
     </div>
-</div>
+  </div>
+</header>
