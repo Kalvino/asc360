@@ -1,9 +1,18 @@
 
+<<<<<<< HEAD
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
       
       <h3 class="muted"><%= link_to "State Farm", '#', id: "logo" %></h3>
+=======
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      
+      <%= link_to image_tag("360.jpg", alt: "logo", id: "logo", :size => "180x180") %>
+      
+>>>>>>> chris/master
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -11,6 +20,7 @@
         </a>
       <nav>
         <ul class="nav pull-right nav-tabs">
+<<<<<<< HEAD
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "About", about_path %></li>
           <% if signed_in? %>
@@ -26,6 +36,23 @@
             
           <% end %>
         </ul>
+=======
+          <% if signed_in? %>
+            <li><%= link_to "Welcome Chris,", '#' %></li>
+            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>            
+            <li><%= link_to "Contact ASC", 'mailto://info@americansigncrafters.com', :target => "_blank"%></li>
+            <li><%= link_to "Help", '#' %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+              
+              <li><%= link_to "Sign in", new_user_session_path %></li><br />
+            
+          <% end %>
+          
+        </ul>
+        <img alt="logo" height="180" id="state" src="/assets/StateFarm-logo.jpg" width="300" style="
+    float: right;">
+>>>>>>> chris/master
       </nav>
     </div>
   </div>

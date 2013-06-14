@@ -49,9 +49,9 @@ body {
 
 /* User sign in and sign forms. */
 .border-form-div {
-  max-width: 400px;
-  padding: 5px 5px 5px;
-  margin: 0 auto 5px;
+  max-width: 500px;
+  padding: 40px 29px 29px;
+  margin: 0 auto 20px;
   background-color: #fff;
   border: 1px solid #e5e5e5;
   -webkit-border-radius: 5px;
@@ -63,7 +63,7 @@ body {
 }
 .border-form-div .form-signin-heading,
 .border-form-div .checkbox {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .border-form-div input[type="text"],
 .border-form-div input[type="email"],
@@ -72,38 +72,4 @@ body {
   height: auto;
   margin-bottom: 3px;
   padding: 3px 3px;
-}
-
-.dashboard{
-
-  height: auto;
-  padding-top: 70px
-}
-
-.boarder{
-
-  padding-top: 130px
-}
-
-.footer {
-  padding-bottom: 
-
-}
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  padding-top: 3px;
-  line-height: 20;
-  
-}
-#state {
-  float: left;
-  margin-left: 400px;
-  
-  line-height: 20;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
 }

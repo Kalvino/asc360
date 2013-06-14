@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 <h2>Change your password</h2>
 
+=======
+<div class="boarder">
+<div class="border-form-div">	
+<h2>Change your password</h2>
+<div class="border-form-div">
+>>>>>>> chris/master
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
@@ -12,5 +19,13 @@
 
   <div><%= f.submit "Change my password" %></div>
 <% end %>
+<<<<<<< HEAD
 
 <%= render "devise/shared/links" %>
+=======
+</div>
+
+<%= render "devise/shared/links" %>
+</div>
+</div>
+>>>>>>> chris/master

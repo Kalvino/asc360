@@ -1,7 +1,8 @@
-<<<<<<< HEAD
-
+<div class="boarder">
 <div class="border-form-div">
-<div class= "signlogo" align="center"><%= link_to image_tag("360.jpg", alt: "logo", :size => "180x180") %></div>
+<div class= "signlogo" align="center"><%= link_to image_tag("360.jpg", alt: "logo", :size => "180x180") %>
+</div>
+<<<<<<< HEAD
 <div class="border-form-div">
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div><%= f.label :email %><br />
@@ -17,14 +18,7 @@
   <div><%= f.submit "LOGIN" %></div>
 <% end %>
 </div>
-
-<%= render "devise/shared/links" %>
-</div>
 =======
-<div class="boarder">
-<div class="border-form-div">
-<div class= "signlogo" align="center"><%= link_to image_tag("360.jpg", alt: "logo", :size => "180x180") %>
-</div>
 <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 
   <%= f.input :email %>
@@ -35,9 +29,9 @@
     <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
   </div>
 <% end %>
+>>>>>>> chris/master
 
 <%= render "devise/shared/links" %>
 </div>
 </div>
->>>>>>> chris/master
 
