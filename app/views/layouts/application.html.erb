@@ -8,16 +8,11 @@
     <%= render 'layouts/shim' %>  
   </head>
   <body>
-<<<<<<< HEAD
-    <%= render 'layouts/header' %>
-=======
-    here
-    <% puts request.env['PATH_INFO'] %>
-    
-    here
+
+    <% if signed_in? %>
       <%= render 'layouts/header' %>
+    <%  end %>  
   
->>>>>>> chris/master
     <div class="container" >
       <% flash.each do |name, msg| %>
                 <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
@@ -25,11 +20,8 @@
             
             <%= yield %>	    
 	    <%= render 'layouts/footer' %>
-<<<<<<< HEAD
-		</div>
-=======
+
 	  </div>
- 
->>>>>>> chris/master
+
   </body>
 </html>

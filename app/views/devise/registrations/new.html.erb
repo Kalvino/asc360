@@ -1,34 +1,28 @@
-<<<<<<< HEAD
-<div class="border-form-div">
-<div class= "signlogo" align="center"><%= link_to image_tag("360.jpg", alt: "logo", :size => "180x180") %></div>
-=======
+
 <div class="boarder">
 <div class="border-form-div">
 <div class= "signlogo" align="center">
 	<%= link_to image_tag("360.jpg", alt: "logo", :size => "180x180") %>
 </div>
->>>>>>> chris/master
+
 <div class="border-form-div">
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "SIGN UP" %></div>
+  <div class="form-actions">
+  	<%= f.submit "Sign Up", class: "btn btn-primary"  %>
+  </div>
 <% end %>
 </div>
 
 <%= render "devise/shared/links" %>
 </div>
-<<<<<<< HEAD
-=======
+
 </div>
->>>>>>> chris/master
+
 

@@ -1,13 +1,5 @@
 <% if user_signed_in? %>
-<<<<<<< HEAD
-<div class="hero-unit">
-<h1>ASC360 Project Management</h1>
 
-<p>
-  You are Logged in !
-</p>
-</div>
-=======
 <div class="dashboard">
 <div style='height: 250px; width: 100%; border: 1px solid black; align: center; font-size: 0pt;'> </div>
 
@@ -40,7 +32,7 @@
   
   <div style='height: 230px; width: 49.65%; border: 1px solid blue; float: left; font-size: 0pt;'>   </div>
  </div>
->>>>>>> chris/master
+
 <% else %> 
 <div class="hero-unit">
 <h1>ASC360 Project Management</h1>
@@ -49,7 +41,8 @@
   Welcome to ASC360 Project Management
 </p>
 <p>
-  <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+  <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary" %>
+  <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary pull-right" %>
 </p>
 </div>
 <% end %>
