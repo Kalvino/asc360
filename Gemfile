@@ -4,12 +4,11 @@ gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'devise'
 gem "bootstrap-sass-rails", "~> 2.2.2.0"
-<<<<<<< HEAD
-=======
+
 gem "shadowbox-rails"
 gem 'simple_form'
 gem "thin"
->>>>>>> chris/master
+
 
 group :production do 
  gem 'pg'
