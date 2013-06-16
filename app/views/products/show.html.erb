@@ -1,40 +1,98 @@
+<div class="dashboard">
+
+  <h4>Site Dashboard</h4>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Site:</b>
-  <%= @product.Site_id %>
-</p>
-
-<p>
-  <b>Agency name:</b>
-  <%= @product.agency_name %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @product.address %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @product.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @product.state %>
-</p>
-
-<p>
-  <b>Zip code:</b>
-  <%= @product.zip_code %>
-</p>
-
-<p>
-  <b>Phone number:</b>
-  <%= @product.phone_number %>
-</p>
-
+<table style="width:350px; border:0px; float:right">
+  <tr>
+    <td><b>Agent Name:</b><br />
+  <%= @product.agency_name %><td>
+    <td><b>Site Address:</b><br />
+  <%= @product.Site_id %><td>  
+  </tr>
+  <tr>
+    <td><b>Agent Number:</b><br />
+  <%= @product.phone_number %><td>
+    <td><b>Site City:</b><br />
+  <%= @product.city %><td>  
+  </tr>
+  <tr>
+    <td><b>Agent Address:</b><br />
+  <%= @product.address %><td>
+    <td><b>Site State:</b><br />
+  <%= @product.state %><td>  
+  </tr>
+  
+</table>  
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+</div>
+
+<h4>Status</h4>
+<div style='height: 50px; width: 100%;background-color:#6cf; border-style:inset; solid blue; float: left;'>
+   <div style='height: 38px; background-color:purple; width: 56%; border-width:4px; border-style: ridge; border-color: blue; float: left;'><div class="progress" Style="align:left;width: 100px;">56% complete</div></div>
+</div>
+
+<h3>Site Milestone Plan</h3>
+<div style='height: 800px; width: 50%;background-color:#fff; border-style:groove; solid black; float: left;'></div>
+<div style='height: 400px; width: 48%;background-color:#6ff; border-style:inset; solid blue; float: right;'>
+     <h3><u>Project Timeline</u></h3>
+  <div height= "20px"></div>
+  <hr />
+  <h4><u>An Annoncement Title</u></h4><br />
+  <p>By Someone</p>
+  <p>Viven Madish.....</p>
+
+  <div height= "20px"></div>
+
+  <h4><u>Another Annoncement Title</u></h4><br />
+  <p>By Someone</p>
+  <p>Viven Madish.....</p>
+
+  <div height= "20px"></div>
+
+  <h4><u>A Longer Rambling Annoncement Title</u></h4><br />
+  <p>By Someone</p>
+  <p>Viven Madish.....</p>
+
+  <div height= "20px"></div>
+
+  <p>+ Add Announcement</p>
+
+</div>
+<div style='height: 400px; width: 48%;background-color:#fcf; border-style:inset; solid blue; float: right;'>
+   <h4><u>Document library</u></h4>
+   <table>
+    <tr>
+      <td><a>Site Survey</a><td>
+      <td>12/10/2008<td>
+      <td><a>John Smith</a><td>
+      <td>property1<td> 
+      <td>property2<td> 
+    </tr>
+    <tr>
+      <td><a>Book/Budget</a><td>
+      <td>12/10/2008<td>
+      <td><a> Smith John</a><td>
+      <td>property1<td> 
+      <td>property2<td> 
+    </tr>
+    <tr>
+      <td><a>Permit</a><td>
+      <td>12/10/2008<td>
+      <td><a>John Kennedy</a><td>
+      <td>property1<td> 
+      <td>property2<td> 
+    </tr>
+    <tr>
+      <td><a>Quality Control Check</a><td>
+      <td>12/10/2008<td>
+      <td><a>Kennedy John</a><td>
+      <td>property1<td> 
+      <td>property2<td> 
+    </tr>  
+      
+   </table> 
+</div>

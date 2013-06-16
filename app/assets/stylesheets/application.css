@@ -85,8 +85,22 @@ body {
   padding-top: 80px
 }
 
+.inner-frame{
+
+  padding-top: 100px
+}
+
+input{
+
+  width:20px;
+}
+
 .footer {
-  padding-bottom: 
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;   /* Height of the footer */
+  background:#6cf; 
 
 }
 
@@ -107,3 +121,13 @@ body {
     text-decoration: none;
   }
 }
+
+table tr.oddrow {
+    background-color: #ADD8E6;
+}
+
+table tr.evenrow {
+    background-color: #C0C0C0;
+}
+
+td{border:2px solid #000;}

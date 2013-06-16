@@ -1,48 +1,66 @@
+<% if user_signed_in? %>
+
 <div class="inner-frame">
 <table style="border:2px solid black; width:850px; background-color: #C0C0C0; float:left">
 <tr>  
 
 <td>
   <form action="" method="post" >
-    Agency Name: <br /><input type="text" style="width:120px">
+    Agency Name<br />
+
+    <input type="text" style="width:120px">
   
   </form> 
 
 </td>
 <td>
   <form action="" method="post" >
-    Address: <br /><input type="text" style="width:120px">
+    Address <br /><input type="text" style="width:120px">
   
   </form>
 </td>
 <td>
-  <form action="" method="post" >
-    City: <br /><input type="text" style="width:120px">
-  
+  <form action="" method="get" >
+    City <br />
+    <select name="" style="width:120px">
+     <option value="albert">Albertville</option>
+     <option value="Birm">Birmingham</option>
+     <option value="" selected>pick One</option>
+     <option value="mobile">Mobile</option>
+     <option value="anch">Anchorage</option>
+     <option value="Jun">Juneau</option>
+     <option value="Fairbanks">Fairbanks</option>
+    </select>  
   </form>
 </td>
 <td>
-  <form action="" method="post" >
-    State: <br /><input type="text" style="width:120px">
+  <form action="" method="get" >
+    State <br />
+    <select name="" style="width:120px">
+     <option value="bla">blabla</option>
+     <option value="lab">lablab</option>
+     <option value="" selected>AK</option>
+     <option value="alas">Alaska</option>
+    </select>
   
   </form> 
 </td>
 <td>
   <form action="" method="post" >
-    Zip Code: <br /><input type="text" style="width:120px">
+    Zip Code <br /><input type="text" style="width:120px">
   
   </form> 
 </td>
 <td>
   <form action="" method="post" >
-    Phone Number: <br /><input type="text" style="width:120px">
+    Phone Number <br /><input type="text" style="width:120px">
   
   </form> 
 </td>
 </table>
 <table style="float: left; background-color: #C0C0C0; border:2px;">
 <td>
-  Site Id:<br />
+  Site Id<br />
   <%= form_tag products_path, :method => 'get' do %>  
   <%= hidden_field_tag :direction, params[:direction] %>  
   <%= hidden_field_tag :sort, params[:sort] %>  
@@ -56,9 +74,9 @@
 </tr>
 </table>  
 <br /> 
-<div style="height:150px"> </div>
+<div style="height:130px"> </div>
 <p>
-<h1>Search Results</h1>
+<h3>Search Results</h3>
 </p>
 
 <table style="border:1px solid black; width:1200px; background-color:#cfc; text-align:center ">
@@ -76,7 +94,7 @@
   </tr>
 
 <% @products.each do |product| %>
-  <tr class="<%= cycle('oddrow', 'evenrow') -%>">
+  <tr class="<%= cycle('oddrow', 'evenrow') -%>" onclick="location.href='<%= @product %>'"> >
     <td><%= product.Site_id %></td>
     <td><%= product.agency_name %></td>
     <td><%= product.address %></td>
@@ -93,7 +111,20 @@
 
 <br />
 
-<%= link_to 'Add New Record', new_product_path %>
+<%= link_to '+ Add New Record', new_product_path %>
 
 </div>
+
+<% else %> 
+<div class="hero-unit">
+<h1>ASC360 Project Management</h1>
+
+<p>
+  Welcome to ASC360 Project Management
+</p>
+<p>
+  <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary pull-right" %>
+</p>
+</div>
+<% end %>
 
