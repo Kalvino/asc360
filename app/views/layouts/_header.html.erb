@@ -14,6 +14,7 @@
         <ul class="nav pull-right nav-tabs">
           <% if signed_in? %>
             <li><%= link_to "Welcome Chris,", '#' %></li>
+            <li><%= link_to "Dashboard", products_path %></li>
             <li><%= link_to "Edit Profile", edit_user_registration_path %></li>            
             <li><%= link_to "Contact ASC", 'mailto://info@americansigncrafters.com', :target => "_blank"%></li>
             <li><%= link_to "Help", '#' %></li>

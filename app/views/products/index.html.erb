@@ -1,0 +1,99 @@
+<div class="inner-frame">
+<table style="border:2px solid black; width:850px; background-color: #C0C0C0; float:left">
+<tr>  
+
+<td>
+  <form action="" method="post" >
+    Agency Name: <br /><input type="text" style="width:120px">
+  
+  </form> 
+
+</td>
+<td>
+  <form action="" method="post" >
+    Address: <br /><input type="text" style="width:120px">
+  
+  </form>
+</td>
+<td>
+  <form action="" method="post" >
+    City: <br /><input type="text" style="width:120px">
+  
+  </form>
+</td>
+<td>
+  <form action="" method="post" >
+    State: <br /><input type="text" style="width:120px">
+  
+  </form> 
+</td>
+<td>
+  <form action="" method="post" >
+    Zip Code: <br /><input type="text" style="width:120px">
+  
+  </form> 
+</td>
+<td>
+  <form action="" method="post" >
+    Phone Number: <br /><input type="text" style="width:120px">
+  
+  </form> 
+</td>
+</table>
+<table style="float: left; background-color: #C0C0C0; border:2px;">
+<td>
+  Site Id:<br />
+  <%= form_tag products_path, :method => 'get' do %>  
+  <%= hidden_field_tag :direction, params[:direction] %>  
+  <%= hidden_field_tag :sort, params[:sort] %>  
+  <p>  
+    <%= text_field_tag :search, params[:search] %> 
+     
+    <%= submit_tag "Search", :Site_id => nil %>  
+  </p>
+  <% end %> 
+</td>
+</tr>
+</table>  
+<br /> 
+<div style="height:150px"> </div>
+<p>
+<h1>Search Results</h1>
+</p>
+
+<table style="border:1px solid black; width:1200px; background-color:#cfc; text-align:center ">
+  <tr>
+    <th><%= sortable "Site_id" %></th>
+    <th><%= sortable "agency_name" %></th>
+    <th><%= sortable "address" %></th>
+    <th><%= sortable "city" %></th>
+    <th><%= sortable "state" %></th>
+    <th><%= sortable "zip_code" %></th>
+    <th><%= sortable "phone_number" %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr class="<%= cycle('oddrow', 'evenrow') -%>">
+    <td><%= product.Site_id %></td>
+    <td><%= product.agency_name %></td>
+    <td><%= product.address %></td>
+    <td><%= product.city %></td>
+    <td><%= product.state %></td>
+    <td><%= product.zip_code %></td>
+    <td><%= product.phone_number %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Add New Record', new_product_path %>
+
+</div>
+
