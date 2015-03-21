@@ -10,14 +10,14 @@ body {
 @import 'bootstrap-responsive';
 
 .navbar-inner{
-    @include box-shadow(none !important);
-    border: 0;
+   @include box-shadow(none !important);
+   border: 0;
 }
 
 .footer{
-    margin-top: 50px;
-    color: $grayLight;
-    a{
-        color: $gray;
-    }
+   margin-top: 50px;
+   color: $grayLight;
+   a{
+      color: $gray;
+   }
 }
